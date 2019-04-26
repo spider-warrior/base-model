@@ -5,15 +5,23 @@
     <parent>
         <artifactId>base-module</artifactId>
         <groupId>cn.t</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>base-module-mybatis</artifactId>
     <packaging>pom</packaging>
+
+    <name>mybatis module</name>
+    <description>mybatis module</description>
+
     <modules>
         <module>base-module-mybatis-dao</module>
         <module>base-module-mybatis-entity</module>
     </modules>
+
+    <properties>
+        <mybatis.core.version>3.3.0</mybatis.core.version>
+    </properties>
 
 </project>
