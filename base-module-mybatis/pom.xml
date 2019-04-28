@@ -23,7 +23,7 @@
 
     <properties>
         <mybatis.module.version>1.0-SNAPSHOT</mybatis.module.version>
-        <mybatis.core.version>3.3.0</mybatis.core.version>
+        <mybatis.core.version>3.5.0</mybatis.core.version>
         <page.helper.version>5.1.8</page.helper.version>
     </properties>
 
