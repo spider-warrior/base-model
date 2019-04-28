@@ -15,4 +15,11 @@
     <name>mybatis entity module</name>
     <description>mybatis entity module</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>
