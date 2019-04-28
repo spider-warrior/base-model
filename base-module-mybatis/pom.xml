@@ -3,12 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>base-module</artifactId>
         <groupId>cn.t</groupId>
+        <artifactId>base-module</artifactId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <version>${mybatis.module.version}</version>
     <artifactId>base-module-mybatis</artifactId>
     <packaging>pom</packaging>
 
@@ -16,12 +16,40 @@
     <description>mybatis module</description>
 
     <modules>
-        <module>base-module-mybatis-dao</module>
         <module>base-module-mybatis-entity</module>
+        <module>base-module-mybatis-dao</module>
+        <module>base-module-mybatis-service</module>
     </modules>
 
     <properties>
+        <mybatis.module.version>1.0-SNAPSHOT</mybatis.module.version>
         <mybatis.core.version>3.3.0</mybatis.core.version>
+        <page.helper.version>5.1.8</page.helper.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.t</groupId>
+                <artifactId>base-module-mybatis-entity</artifactId>
+                <version>${mybatis.module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.t</groupId>
+                <artifactId>base-module-mybatis-dao</artifactId>
+                <version>${mybatis.module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.t</groupId>
+                <artifactId>base-module-mybatis-service</artifactId>
+                <version>${mybatis.module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${page.helper.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
