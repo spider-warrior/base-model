@@ -54,7 +54,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity, E, PK extends Serial
     }
 
     @Override
-    public void modify(T t) {
+    public void modifyByPrimaryKey(T t) {
         baseMapper.updateByPrimaryKey(t);
     }
 
