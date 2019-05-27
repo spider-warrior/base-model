@@ -20,8 +20,11 @@ public interface BaseService<T extends BaseEntity, E, PK extends Serializable, M
 
     void removeById(PK id);
 
-    void modify(T t);
-
     void save(T t);
 
+    void saveSelective(T t);
+
+    void modify(T t);
+
+    void modifyByPrimaryKeySelective(T t);
 }

@@ -44,13 +44,23 @@ public abstract class BaseServiceImpl<T extends BaseEntity, E, PK extends Serial
     }
 
     @Override
-    public void modify(T t) {
-        baseMapper.updateByPrimaryKeySelective(t);
+    public void save(T t) {
+        baseMapper.insert(t);
     }
 
     @Override
-    public void save(T t) {
+    public void saveSelective(T t) {
         baseMapper.insertSelective(t);
+    }
+
+    @Override
+    public void modify(T t) {
+        baseMapper.updateByPrimaryKey(t);
+    }
+
+    @Override
+    public void modifyByPrimaryKeySelective(T t) {
+        baseMapper.updateByPrimaryKeySelective(t);
     }
 
     public BaseServiceImpl(M baseMapper) {
