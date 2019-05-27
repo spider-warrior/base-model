@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface BaseService<T extends BaseEntity, E, PK extends Serializable, M extends BaseMapper<T, E, PK>> {
 
-    T queryById(PK id);
+    T queryByPrimaryKey(PK id);
 
     List<T> queryByExample(E e);
 
@@ -18,7 +18,7 @@ public interface BaseService<T extends BaseEntity, E, PK extends Serializable, M
 
     List<T> queryAll();
 
-    void removeById(PK id);
+    void removeByPrimaryKey(PK id);
 
     void save(T t);
 

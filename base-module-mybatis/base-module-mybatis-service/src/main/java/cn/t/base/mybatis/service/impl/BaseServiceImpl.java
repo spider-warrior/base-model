@@ -15,7 +15,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity, E, PK extends Serial
     protected final M baseMapper;
 
     @Override
-    public T queryById(PK id) {
+    public T queryByPrimaryKey(PK id) {
         return baseMapper.selectByPrimaryKey(id);
     }
 
@@ -39,7 +39,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity, E, PK extends Serial
     }
 
     @Override
-    public void removeById(PK id) {
+    public void removeByPrimaryKey(PK id) {
         baseMapper.deleteByPrimaryKey(id);
     }
 
