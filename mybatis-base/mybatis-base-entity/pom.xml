@@ -3,22 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>cn.t</groupId>
-        <artifactId>base-module-mybatis</artifactId>
-        <version>${mybatis.module.version}</version>
+        <groupId>cn.t.base</groupId>
+        <artifactId>mybatis-base</artifactId>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>base-module-mybatis-dao</artifactId>
+    <artifactId>mybatis-base-entity</artifactId>
     <packaging>jar</packaging>
 
-    <name>mybatis dao module</name>
-    <description>mybatis dao module</description>
+    <name>mybatis entity module</name>
+    <description>mybatis entity module</description>
 
     <dependencies>
         <dependency>
-            <groupId>cn.t</groupId>
-            <artifactId>base-module-mybatis-entity</artifactId>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
         </dependency>
     </dependencies>
 </project>

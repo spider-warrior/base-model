@@ -3,20 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>base-module-web</artifactId>
-        <groupId>cn.t</groupId>
-        <version>${web.module.version}</version>
+        <groupId>cn.t.base</groupId>
+        <artifactId>mybatis-base</artifactId>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>base-module-web-mvc</artifactId>
+    <artifactId>mybatis-base-dao</artifactId>
     <packaging>jar</packaging>
+
+    <name>mybatis dao module</name>
+    <description>mybatis dao module</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
+            <groupId>cn.t.base</groupId>
+            <artifactId>mybatis-base-entity</artifactId>
         </dependency>
     </dependencies>
-
 </project>
