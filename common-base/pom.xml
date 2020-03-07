@@ -15,5 +15,14 @@
         <module>common-base-service</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.t.base</groupId>
+                <artifactId>common-base-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
