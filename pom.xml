@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.t.base</groupId>
-    <artifactId>base-all</artifactId>
+    <artifactId>base-model-all</artifactId>
     <packaging>pom</packaging>
     <version>${revision}</version>
 
