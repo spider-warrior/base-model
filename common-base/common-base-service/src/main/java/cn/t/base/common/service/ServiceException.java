@@ -5,38 +5,25 @@ import java.util.Map;
 
 public class ServiceException extends Exception {
 
-    private String msg;
-    private String code;
+    private ErrorInfo errorInfo;
 
     private Map<String, Object> data = new HashMap<>();
 
-    public ServiceException(String message, String msg, String code) {
-        super(message);
-        this.msg = msg;
-        this.code = code;
+    public ServiceException(ErrorInfo errorInfo) {
+        this.errorInfo = errorInfo;
     }
 
-    public ServiceException(String message, String msg, String code, Map<String, Object> data) {
-        super(message);
-        this.msg = msg;
-        this.code = code;
+    public ServiceException(ErrorInfo errorInfo, Map<String, Object> data) {
+        this.errorInfo = errorInfo;
         this.data = data;
     }
 
-    public String getMsg() {
-        return msg;
+    public ErrorInfo getErrorInfo() {
+        return errorInfo;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
+    public void setErrorInfo(ErrorInfo errorInfo) {
+        this.errorInfo = errorInfo;
     }
 
     public Map<String, Object> getData() {
