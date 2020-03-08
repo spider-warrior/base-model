@@ -9,9 +9,9 @@
     <packaging>pom</packaging>
     <version>${revision}</version>
 
-    <name>base module</name>
-    <description>base module</description>
-    <url>https://github.com/qq362961910/base-module</url>
+    <name>base module all</name>
+    <description>base module all</description>
+    <url>https://github.com/qq362961910/base-module-all</url>
 
     <modules>
         <module>common-base</module>
@@ -113,9 +113,9 @@
     </developers>
 
     <scm>
-        <connection>scm:https://github.com/qq362961910/base-module.git</connection>
-        <developerConnection>scm:https://github.com/qq362961910/base-module.git</developerConnection>
-        <url>https://github.com/qq362961910/base-module.git</url>
+        <connection>scm:https://github.com/qq362961910/base-module-all.git</connection>
+        <developerConnection>scm:https://github.com/qq362961910/base-module-all.git</developerConnection>
+        <url>https://github.com/qq362961910/base-module-all.git</url>
     </scm>
 
     <licenses>
