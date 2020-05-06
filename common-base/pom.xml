@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>common-base-service</module>
+        <module>common-base-response</module>
     </modules>
 
     <dependencyManagement>
