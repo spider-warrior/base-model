@@ -12,4 +12,11 @@
     <artifactId>common-base-response</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.t.base</groupId>
+            <artifactId>common-base-service</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>
