@@ -4,18 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.t.base</groupId>
-    <artifactId>base-model-all</artifactId>
+    <groupId>cn.t</groupId>
+    <artifactId>base-model</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>base module all</name>
-    <description>base module all</description>
-    <url>https://github.com/qq362961910/base-module-all</url>
+    <name>base module</name>
+    <description>base module</description>
+    <url>https://github.com/qq362961910/base-module</url>
 
     <modules>
         <module>common-base</module>
         <module>mybatis-base</module>
+        <module>base-model-dependency-management</module>
     </modules>
 
     <properties>
@@ -30,7 +31,6 @@
         <maven-surefire-plugin-version>2.22.2</maven-surefire-plugin-version>
         <maven-gpg-plugin-version>1.6</maven-gpg-plugin-version>
         <maven-javadoc-plugin-version>3.1.1</maven-javadoc-plugin-version>
-
     </properties>
 
     <dependencies>
@@ -41,6 +41,18 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.t</groupId>
+                <artifactId>base-model-dependency-management</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
@@ -87,9 +99,9 @@
     </developers>
 
     <scm>
-        <connection>scm:https://github.com/qq362961910/base-module-all.git</connection>
-        <developerConnection>scm:https://github.com/qq362961910/base-module-all.git</developerConnection>
-        <url>https://github.com/qq362961910/base-module-all.git</url>
+        <connection>scm:https://github.com/qq362961910/base-module.git</connection>
+        <developerConnection>scm:https://github.com/qq362961910/base-module.git</developerConnection>
+        <url>https://github.com/qq362961910/base-module.git</url>
     </scm>
 
     <licenses>
@@ -115,8 +127,7 @@
                                 </goals>
                                 <configuration>
                                     <target>
-                                        <property environment="env"/>
-                                        <echoproperties />
+                                        <echoproperties/>
                                     </target>
                                 </configuration>
                             </execution>

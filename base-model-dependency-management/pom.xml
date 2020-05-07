@@ -2,15 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>cn.t</groupId>
-        <artifactId>common-base</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>common-base-service</artifactId>
-    <packaging>jar</packaging>
-
+    <groupId>cn.t</groupId>
+    <artifactId>base-model-dependency-management</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
 </project>
