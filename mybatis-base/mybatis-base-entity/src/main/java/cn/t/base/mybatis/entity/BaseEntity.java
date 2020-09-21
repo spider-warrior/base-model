@@ -6,31 +6,31 @@ import java.time.LocalDateTime;
 public class BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private LocalDateTime createTime;
+    private LocalDateTime crTime;
 
-    private LocalDateTime updateTime;
+    private LocalDateTime upTime;
 
-    public LocalDateTime getCreateTime() {
-        return createTime;
+    public LocalDateTime getCrTime() {
+        return crTime;
     }
 
-    public void setCreateTime(LocalDateTime createTime) {
-        this.createTime = createTime;
+    public void setCrTime(LocalDateTime crTime) {
+        this.crTime = crTime;
     }
 
-    public LocalDateTime getUpdateTime() {
-        return updateTime;
+    public LocalDateTime getUpTime() {
+        return upTime;
     }
 
-    public void setUpdateTime(LocalDateTime updateTime) {
-        this.updateTime = updateTime;
+    public void setUpTime(LocalDateTime upTime) {
+        this.upTime = upTime;
     }
 
     @Override
     public String toString() {
         return "BaseEntity{" +
-                "createTime=" + createTime +
-                ", updateTime=" + updateTime +
+                "crTime=" + crTime +
+                ", upTime=" + upTime +
                 '}';
     }
 }
