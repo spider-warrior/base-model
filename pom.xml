@@ -16,7 +16,7 @@
     <modules>
         <module>common-base</module>
         <module>mybatis-base</module>
-        <module>base-model-dependency-management</module>
+        <module>base-module-dependency-management</module>
     </modules>
 
     <properties>
