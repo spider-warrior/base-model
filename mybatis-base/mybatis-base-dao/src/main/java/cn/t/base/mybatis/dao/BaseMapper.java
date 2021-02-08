@@ -11,23 +11,26 @@ public interface BaseMapper<T, E, PK extends Serializable> {
 
     int insertSelective(T record);
 
-    long countByExample(E example);
+    void insertList(List<T> list);
+
+    int deleteByPrimaryKey(PK pk);
 
     int deleteByExample(E example);
 
-    int deleteByPrimaryKey(PK pk);
+    long countByExample(E example);
+
+    T selectByPrimaryKey(PK pk);
 
     List<T> selectByExample(E example);
 
     List<T> selectAll();
 
-    T selectByPrimaryKey(PK pk);
-
-    int updateByExampleSelective(@Param("record") T record, @Param("example") E example);
-
-    int updateByExample(@Param("record") T record, @Param("example") E example);
-
     int updateByPrimaryKey(T record);
 
     int updateByPrimaryKeySelective(T record);
+
+    int updateByExample(@Param("record") T record, @Param("example") E example);
+
+    int updateByExampleSelective(@Param("record") T record,
+                                 @Param("example") E example);
 }

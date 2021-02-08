@@ -3,12 +3,20 @@ package cn.t.base.mybatis.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class BaseEntity implements Serializable {
+public class BaseEntity<Key extends Serializable> implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    private Key id;
     private LocalDateTime crTime;
-
     private LocalDateTime upTime;
+
+    public Key getId() {
+        return id;
+    }
+
+    public void setId(Key id) {
+        this.id = id;
+    }
 
     public LocalDateTime getCrTime() {
         return crTime;
@@ -29,7 +37,8 @@ public class BaseEntity implements Serializable {
     @Override
     public String toString() {
         return "BaseEntity{" +
-                "crTime=" + crTime +
+                "id=" + id +
+                ", crTime=" + crTime +
                 ", upTime=" + upTime +
                 '}';
     }
