@@ -53,7 +53,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <distributionManagement>
+<!--    <distributionManagement>
         <snapshotRepository>
             <id>oss</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -62,6 +62,22 @@
             <id>oss</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
+    </distributionManagement>-->
+
+    <distributionManagement>
+
+        <repository>
+            <id>maven-releases</id>
+            <name>Internal Releases</name>
+            <url>http://maven.ifenxi.com/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://maven.ifenxi.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
+
     </distributionManagement>
 
 </project>

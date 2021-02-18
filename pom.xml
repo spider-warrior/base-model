@@ -11,7 +11,7 @@
 
     <name>base module</name>
     <description>base module</description>
-    <url>https://github.com/qq362961910/base-module</url>
+    <url>https://github.com/pider-warrior/base-module</url>
 
     <modules>
         <module>common-base</module>
@@ -99,9 +99,9 @@
     </developers>
 
     <scm>
-        <connection>scm:https://github.com/qq362961910/base-module.git</connection>
-        <developerConnection>scm:https://github.com/qq362961910/base-module.git</developerConnection>
-        <url>https://github.com/qq362961910/base-module.git</url>
+        <connection>scm:https://github.com/pider-warrior/base-module.git</connection>
+        <developerConnection>scm:https://github.com/pider-warrior/base-module.git</developerConnection>
+        <url>https://github.com/pider-warrior/base-module.git</url>
     </scm>
 
     <licenses>
