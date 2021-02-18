@@ -10,10 +10,6 @@ public class ResultVoWrapper {
     private static final String METHOD_NOT_SUPPORT = "405";
     private static final String INTERNAL_ERROR = "500";
 
-
-    /**
-     * 成功
-     */
     public ResultVo buildSuccess() {
         return buildSuccess(null, null);
     }
@@ -29,10 +25,6 @@ public class ResultVoWrapper {
     public ResultVo buildSuccess(String message, Object data) {
         return doBuild(SUCCESS, message, data);
     }
-
-    /**
-     * 400
-     */
 
     public ResultVo buildBadParam() {
         return buildBadParam(null);
@@ -50,23 +42,14 @@ public class ResultVoWrapper {
         return buildFail(BAD_PARAM, (msg == null ? "参数异常" : msg), data);
     }
 
-    /**
-     * 404
-     */
     public ResultVo buildSourceNotFound() {
         return buildFail(SOURCE_NOT_FOUND, "资源未找到");
     }
 
-    /**
-     * 405
-     */
     public ResultVo buildMethodNotSupport() {
         return buildFail(METHOD_NOT_SUPPORT, "不支持的请求方法");
     }
 
-    /**
-     * 失败
-     */
     public ResultVo buildFail() {
         return buildFail(INTERNAL_ERROR, "服务器内部异常");
     }

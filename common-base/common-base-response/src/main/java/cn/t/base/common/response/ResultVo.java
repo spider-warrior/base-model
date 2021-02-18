@@ -1,7 +1,10 @@
 package cn.t.base.common.response;
 
 
-public class ResultVo {
+import java.io.Serializable;
+
+public class ResultVo implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private String code;
 
@@ -13,18 +16,16 @@ public class ResultVo {
         return code;
     }
 
-    public ResultVo setCode(String code) {
+    public void setCode(String code) {
         this.code = code;
-        return this;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public ResultVo setMessage(String message) {
+    public void setMessage(String message) {
         this.message = message;
-        return this;
     }
 
     public Object getData() {
@@ -33,5 +34,14 @@ public class ResultVo {
 
     public void setData(Object data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "ResultVo{" +
+                "code='" + code + '\'' +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
     }
 }

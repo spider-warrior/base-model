@@ -1,8 +1,10 @@
 package cn.t.base.common.response;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class PageableVo {
+public class PageableVo implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     /**
      * 页码，从1开始
@@ -17,15 +19,9 @@ public class PageableVo {
      */
     private long total;
     /**
-     * 总页数
-     */
-    private int pages;
-
-    /**
      * 数据
      * */
     private List<?> rows;
-
 
     public int getPageNumber() {
         return pageNumber;
@@ -51,19 +47,21 @@ public class PageableVo {
         this.total = total;
     }
 
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        this.pages = pages;
-    }
-
     public List<?> getRows() {
         return rows;
     }
 
     public void setRows(List<?> rows) {
         this.rows = rows;
+    }
+
+    @Override
+    public String toString() {
+        return "PageableVo{" +
+                "pageNumber=" + pageNumber +
+                ", pageSize=" + pageSize +
+                ", total=" + total +
+                ", rows=" + rows +
+                '}';
     }
 }

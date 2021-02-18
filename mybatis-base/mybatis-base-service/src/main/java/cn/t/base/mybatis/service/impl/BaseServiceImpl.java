@@ -10,7 +10,7 @@ import com.github.pagehelper.PageHelper;
 import java.io.Serializable;
 import java.util.List;
 
-public abstract class BaseServiceImpl<T extends BaseEntity, E, PK extends Serializable, M extends BaseMapper<T, E, PK>> implements BaseService<T, E, PK, M> {
+public abstract class BaseServiceImpl<T extends BaseEntity<PK>, E, PK extends Serializable, M extends BaseMapper<T, E, PK>> implements BaseService<T, E, PK, M> {
 
     protected final M baseMapper;
 
@@ -65,5 +65,10 @@ public abstract class BaseServiceImpl<T extends BaseEntity, E, PK extends Serial
 
     public BaseServiceImpl(M baseMapper) {
         this.baseMapper = baseMapper;
+    }
+
+    @Override
+    public M getMapper() {
+        return baseMapper;
     }
 }

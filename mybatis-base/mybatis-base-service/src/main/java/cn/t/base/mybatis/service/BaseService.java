@@ -8,7 +8,7 @@ import com.github.pagehelper.Page;
 import java.io.Serializable;
 import java.util.List;
 
-public interface BaseService<T extends BaseEntity, E, PK extends Serializable, M extends BaseMapper<T, E, PK>> {
+public interface BaseService<T extends BaseEntity<PK>, E, PK extends Serializable, M extends BaseMapper<T, E, PK>> {
 
     T queryByPrimaryKey(PK id);
 
@@ -27,4 +27,6 @@ public interface BaseService<T extends BaseEntity, E, PK extends Serializable, M
     void modifyByPrimaryKey(T t);
 
     void modifyByPrimaryKeySelective(T t);
+
+    M getMapper();
 }
