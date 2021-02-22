@@ -10,71 +10,71 @@ public class ResultVoWrapper {
     private static final String METHOD_NOT_SUPPORT = "405";
     private static final String INTERNAL_ERROR = "500";
 
-    public ResultVo buildSuccess() {
+    public static ResultVo buildSuccess() {
         return buildSuccess(null, null);
     }
 
-    public ResultVo buildSuccess(Object data) {
+    public static ResultVo buildSuccess(Object data) {
         return buildSuccess(null, data);
     }
 
-    public ResultVo buildSuccess(String message) {
+    public static ResultVo buildSuccess(String message) {
         return buildSuccess(message, null);
     }
 
-    public ResultVo buildSuccess(String message, Object data) {
+    public static ResultVo buildSuccess(String message, Object data) {
         return doBuild(SUCCESS, message, data);
     }
 
-    public ResultVo buildBadParam() {
+    public static ResultVo buildBadParam() {
         return buildBadParam(null);
     }
 
-    public ResultVo buildBadParam(String msg) {
+    public static ResultVo buildBadParam(String msg) {
         return buildBadParam(msg, null);
     }
 
-    public ResultVo buildBadParam(Object data) {
+    public static ResultVo buildBadParam(Object data) {
         return buildBadParam(null, data);
     }
 
-    public ResultVo buildBadParam(String msg, Object data) {
+    public static ResultVo buildBadParam(String msg, Object data) {
         return buildFail(BAD_PARAM, (msg == null ? "参数异常" : msg), data);
     }
 
-    public ResultVo buildSourceNotFound() {
+    public static ResultVo buildSourceNotFound() {
         return buildFail(SOURCE_NOT_FOUND, "资源未找到");
     }
 
-    public ResultVo buildMethodNotSupport() {
+    public static ResultVo buildMethodNotSupport() {
         return buildFail(METHOD_NOT_SUPPORT, "不支持的请求方法");
     }
 
-    public ResultVo buildFail() {
+    public static ResultVo buildFail() {
         return buildFail(INTERNAL_ERROR, "服务器内部异常");
     }
 
-    public ResultVo buildFail(ErrorInfo errorInfo) {
+    public static ResultVo buildFail(ErrorInfo errorInfo) {
         return buildFail(errorInfo.getCode(), errorInfo.getMsg());
     }
 
-    public ResultVo buildFail(ErrorInfo errorInfo, Object data) {
+    public static ResultVo buildFail(ErrorInfo errorInfo, Object data) {
         return buildFail(errorInfo.getCode(), errorInfo.getMsg(), data);
     }
 
-    public ResultVo buildFail(String errorCode, String msg) {
+    public static ResultVo buildFail(String errorCode, String msg) {
         return buildFail(errorCode, msg, null);
     }
 
-    public ResultVo buildFail(String errorCode, Object data) {
+    public static ResultVo buildFail(String errorCode, Object data) {
         return buildFail(errorCode, null, data);
     }
 
-    public ResultVo buildFail(String errorCode, String message, Object data) {
+    public static ResultVo buildFail(String errorCode, String message, Object data) {
         return doBuild(errorCode, message, data);
     }
 
-    private ResultVo doBuild(String code, String message, Object data) {
+    private static ResultVo doBuild(String code, String message, Object data) {
         ResultVo vo = new ResultVo();
         vo.setCode(code);
         vo.setMessage(message);
