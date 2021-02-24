@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE</version>
     <artifactId>common-base-service</artifactId>
     <packaging>jar</packaging>
 

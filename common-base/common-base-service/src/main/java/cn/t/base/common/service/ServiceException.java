@@ -3,7 +3,7 @@ package cn.t.base.common.service;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ServiceException extends Exception {
+public class ServiceException extends RuntimeException {
 
     private ErrorInfo errorInfo;
 

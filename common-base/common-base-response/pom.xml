@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <version>1.0.1.RELEASE</version>
+    <version>1.0.2.RELEASE</version>
     <artifactId>common-base-response</artifactId>
     <packaging>jar</packaging>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>cn.t</groupId>
             <artifactId>common-base-service</artifactId>
-            <version>1.0.0.RELEASE</version>
+            <version>1.0.1.RELEASE</version>
         </dependency>
     </dependencies>
 </project>
