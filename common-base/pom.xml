@@ -11,6 +11,9 @@
 
     <artifactId>common-base</artifactId>
     <packaging>pom</packaging>
+
+    <name>common module</name>
+    <description>common module</description>
     <modules>
         <module>common-base-service</module>
         <module>common-base-response</module>
