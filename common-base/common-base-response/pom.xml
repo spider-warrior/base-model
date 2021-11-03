@@ -22,7 +22,7 @@
         <dependency>
             <groupId>cn.t</groupId>
             <artifactId>common-base-service</artifactId>
-            <version>1.0.1.RELEASE</version>
+            <version>1.0.2.RELEASE</version>
         </dependency>
     </dependencies>
 </project>
