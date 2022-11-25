@@ -16,7 +16,7 @@
     <description>common module</description>
     <modules>
         <module>common-base-service</module>
-        <module>common-base-response</module>
+        <module>common-base-web</module>
     </modules>
 
     <properties>
